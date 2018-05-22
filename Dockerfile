@@ -27,7 +27,7 @@ RUN yum update -y \
 #	&& yum -y remove git \
 #	&& yum -y remove maven \
 	&& yum clean all \
-	&& yum autoremove -y \
+	&& yum autoremove -y
 	
 	#start up commands
 	ENTRYPOINT ["java", "-jar", "/home/springboot-websocket.jar"]

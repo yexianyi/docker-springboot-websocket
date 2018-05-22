@@ -21,7 +21,7 @@ RUN yum update -y \
 	&& mvn clean install -DskipTests \
 	&& cp target/springboot-websocket.jar /home/springboot-websocket.jar \
 	&& cd /home \
-	&& rm -f -r Chukonu \
+	&& rm -rf Chukonu \
 	
 	#Uninstall unecessary package
 #	&& yum -y remove git \

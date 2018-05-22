@@ -19,7 +19,7 @@ RUN yum update -y \
 	&& mvn clean install -DskipTests \
 	&& cd /home/Chukonu/chukonu_springboot_websocket \
 	&& mvn clean install -DskipTests \
-	&& cp target/chukonu_springboot_websocket-0.0.1-SNAPSHOT.jar /home/chukonu_springboot_websocket-0.0.1-SNAPSHOT.jar \
+	&& cp target/springboot-websocket.jar /home/springboot-websocket.jar \
 	&& cd /home \
 	&& rm -f -r Chukonu \
 	
@@ -30,5 +30,5 @@ RUN yum update -y \
 	&& yum autoremove -y \
 	
 	#start up commands
-	ENTRYPOINT ["java -jar /home/chukonu_springboot_websocket-0.0.1-SNAPSHOT.jar"]
+	ENTRYPOINT ["java", "-jar", "/home/springboot-websocket.jar"]
 	CMD ["server"]
